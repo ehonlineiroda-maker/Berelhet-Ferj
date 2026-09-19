@@ -26,7 +26,7 @@
       "statisztikai elemzés és a felhasználói élmény javítása érdekében. " +
       "A „Beállítások” gombra kattintva egyénileg is megadhatod, mihez járulsz hozzá.",
     privacyLinkText: "Adatkezelési tájékoztató",
-    privacyLinkUrl: "/adatkezelesi-tajekoztato", // állítsd be a saját linkedre, vagy hagyd üresen ("") ha nincs
+    privacyLinkUrl: "/gdpr/adatkezel_si_t_j_koztat.html", // állítsd be a saját linkedre, vagy hagyd üresen ("") ha nincs
 
     // A kategóriák listája. A "necessary" mindig kötelező és nem kapcsolható ki.
     categories: [
