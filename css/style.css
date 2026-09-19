@@ -370,7 +370,7 @@ summary:focus-visible {
 /* Mobilon a legszűkebb a konténer, itt kell a legjobban „ráközelíteni" az alakra */
 @media (max-width: 480px) {
   .hero-media img {
-    object-position: 62% 8%;
+    object-position: 73% 8%;
   }
 }
 
