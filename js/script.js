@@ -309,7 +309,7 @@ if (fileInput) {
    * Adatok küldése a Make.com webhookra (FormData-val, fájlokkal együtt)
    */
   function submitQuoteRequest(formData) {
-    var webhookUrl = 'https://hook.eu1.make.com/veitjjt4azpxk3qwss8awcxrev7vt37d';
+    var webhookUrl = 'https://https://hook.eu1.make.com/ic2t2ludfbtoi4q5dlkwatjsob4sa3vc';
     
     return fetch(webhookUrl, {
       method: 'POST',
