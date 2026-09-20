@@ -1,18 +1,3 @@
-/**
- * Egyszerű, testreszabható cookie (süti) banner
- * -----------------------------------------------
- * Használat: illeszd be ezt a sort a </body> tag elé bármelyik oldaladon:
- *   <script src="cookie-consent.js"></script>
- *
- * Testreszabás: a fájl tetején lévő CONFIG objektumban tudod módosítani
- * a szöveget, a kategóriákat és a színeket (CSS változókon keresztül).
- *
- * A tényleges adatgyűjtő szkriptek (pl. Google Analytics, Facebook Pixel)
- * betöltéséhez figyeld a "cookieConsentChanged" eseményt, vagy olvasd ki
- * bármikor a window.cookieConsent objektumot. Lásd a fájl alján lévő
- * PÉLDA részt.
- */
-
 (function () {
   "use strict";
 
@@ -118,8 +103,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
-     flex: 1 1 auto; /* Hogy terjeszkedni tudjon a rendelkezésre álló helyen */
-    justify-content: space-between; /* Egyenletesen kitölti a sort */
+    flex: 1 1 auto; 
+    justify-content: space-between;
     max-width: 100%;
     box-sizing: border-box;
   }
