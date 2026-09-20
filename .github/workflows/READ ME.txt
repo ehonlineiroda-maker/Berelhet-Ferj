@@ -1,0 +1,3 @@
+Ezzel kapcsolodott a claudflare hez 
+Itt lett megadva a DNS 
+Claudflare névszervereire lett változtatva a domain szolgáltató névszervereknél
