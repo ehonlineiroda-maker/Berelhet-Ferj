@@ -117,8 +117,9 @@
   .ccb-buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    flex: 0 1 auto;
+    gap: 14px;
+     flex: 1 1 auto; /* Hogy terjeszkedni tudjon a rendelkezésre álló helyen */
+    justify-content: space-between; /* Egyenletesen kitölti a sort */
     max-width: 100%;
     box-sizing: border-box;
   }
