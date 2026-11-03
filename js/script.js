@@ -352,5 +352,33 @@ if (fileInput) {
         submitBtn.textContent = originalLabel;
       });
     });
+
+
+     /** Ez szabályozza, Desctop vagy MOBIL-GMAIL*/
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Megvizsgáljuk, hogy mobileszköz-e a felhasználó
+  const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  
+  // Kiválasztjuk az összes olyan linket, aminek van okos e-mail viselkedése
+  const smartLinks = document.querySelectorAll('.email-smart-link');
+  
+  smartLinks.forEach(link => {
+    if (isMobile) {
+      // Ha mobil, akkor a mailto: linket tesszük be aktívnak
+      const mobileHref = link.getAttribute('data-mobile-href');
+      if (mobileHref) {
+        link.setAttribute('href', mobileHref);
+      }
+    } else {
+      // Ha asztali gép, akkor pedig az űrlapra ugrik
+      const desktopHref = link.getAttribute('data-desktop-href');
+      if (desktopHref) {
+        link.setAttribute('href', desktopHref);
+      }
+    }
+  });
+});
+
   }
 })();
