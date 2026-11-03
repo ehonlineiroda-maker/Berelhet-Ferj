@@ -91,17 +91,6 @@
 
     window.fbq("init", pixelId);
     window.fbq("track", "PageView");
-
-    // noscript fallback kép (csak egyszer kerül be a DOM-ba)
-    if (!document.getElementById("ccb-fb-noscript")) {
-      var noscript = document.createElement("noscript");
-      noscript.id = "ccb-fb-noscript";
-      noscript.innerHTML =
-        '<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=' +
-        pixelId +
-        '&ev=PageView&noscript=1" />';
-      document.body.appendChild(noscript);
-    }
   }
 
   // ------------------------------------------------------------------
