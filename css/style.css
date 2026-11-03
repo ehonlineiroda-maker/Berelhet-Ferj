@@ -826,6 +826,166 @@ summary:focus-visible {
 }
 
 /* ==========================================================================
+   Csapat szekció finomított stílusai (Képpel 100% egyező design)
+   ========================================================================== */
+
+/* A kéttónusú háttér: felül törtfehér, alul sötétkék */
+.team-section-wrapper {
+  position: relative;
+  background: linear-gradient(to bottom, #FAF9F6 0%, #FAF9F6 58%, #0D2233 58%, #0D2233 100%);
+  padding-block: clamp(56px, 8vw, 96px);
+  overflow: visible;
+}
+
+.team-subtitle {
+  display: block;
+  text-align: center;
+  color: var(--color-yellow-dark, #E5A600);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 50px;
+}
+
+/* Kártya alapbeállítások */
+.team-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-md, 10px);
+  padding: 0 24px 30px 24px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  transition: transform var(--transition-fast, 0.18s ease), box-shadow var(--transition-fast, 0.18s ease);
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Kilógó arckép keretének pozícionálása */
+.team-avatar-container {
+  margin-top: -65px; /* Kilógatja a képet a kártya tetejéből */
+  margin-bottom: 18px;
+  display: inline-block;
+}
+
+.team-avatar-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid var(--color-yellow, #FFB800);
+  padding: 4px;
+  background: #FFFFFF;
+  margin: 0 auto;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.team-avatar-circle img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+}
+
+/* Szöveges tartalom */
+.team-card-body h3 {
+  font-family: var(--font-body, 'Montserrat', sans-serif);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0D2233;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.team-specialty {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-yellow-dark, #E5A600);
+  margin-bottom: 12px;
+}
+
+/* Kapcsolati ikonok körben */
+.team-contact-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.team-contact-actions a {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #F2F4F6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0D2233;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.team-contact-actions a:hover {
+  background: var(--color-yellow, #FFB800);
+  color: #0D2233;
+}
+
+/* Alsó adat-vonal */
+.team-meta {
+  font-size: 0.85rem;
+  color: var(--color-text-muted, #55636F);
+  font-weight: 600;
+  border-top: 1px solid #EEF1F3;
+  padding-top: 14px;
+  margin-top: 10px;
+}
+
+/* Alsó akciógombok a sötétkék sávban */
+.team-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 48px;
+}
+
+.team-actions .btn {
+  min-width: 220px;
+  text-align: center;
+}
+
+.btn-secondary-yellow {
+  background: var(--color-yellow, #FFB800);
+  color: #0D2233;
+}
+
+/* Responsiveness mobilon */
+@media (max-width: 900px) {
+  .team-section-wrapper {
+    background: linear-gradient(to bottom, #FAF9F6 0%, #FAF9F6 75%, #0D2233 75%, #0D2233 100%);
+  }
+  .team-grid {
+    grid-template-columns: 1fr;
+    max-width: 380px;
+    margin-inline: auto;
+    gap: 75px; /* Hely a kilógó képeknek függőlegesen */
+  }
+}
+
+
+/* ==========================================================================
    FAQ
    ========================================================================== */
 .faq-list {
