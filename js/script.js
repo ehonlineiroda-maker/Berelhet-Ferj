@@ -352,8 +352,35 @@ if (fileInput) {
         submitBtn.textContent = originalLabel;
       });
     });
+    
 
+/** Ez szabályozza, hogy a megadott TELEFON IKON Desctopon a kapcsolat linkre ugorjon MOBILON pedig megnyissa a HÍVÁST!!!
+   */
 
+document.addEventListener("DOMContentLoaded", function() {
+  // Megvizsgáljuk, hogy mobileszköz-e a felhasználó
+  const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  
+  // Összegyűjtjük az összes okos linket (e-mail és telefon külön osztályokkal)
+  const smartLinks = document.querySelectorAll('.email-smart-link, .phone-smart-link');
+  
+  smartLinks.forEach(link => {
+    if (isMobile) {
+      // Ha mobil, beállítjuk a mobil href-et (mailto vagy tel)
+      const mobileHref = link.getAttribute('data-mobile-href');
+      if (mobileHref) {
+        link.setAttribute('href', mobileHref);
+      }
+    } else {
+      // Ha asztali gép, beállítjuk a sima ugrást (#kapcsolat)
+      const desktopHref = link.getAttribute('data-desktop-href');
+      if (desktopHref) {
+        link.setAttribute('href', desktopHref);
+      }
+    }
+  });
+});
+    
      /** Ez szabályozza, Desctop vagy MOBIL-GMAIL*/
 
 document.addEventListener("DOMContentLoaded", function() {
