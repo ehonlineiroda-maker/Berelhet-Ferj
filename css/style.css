@@ -1429,3 +1429,65 @@ summary:focus-visible {
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { width: 100%; }
 }
+
+/* ==========================================================================
+   Mobil ragadós alsó sáv (csak mobilon / tableten látszik)
+   ========================================================================== */
+.mobile-cta-bar {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .mobile-cta-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 450;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px));
+    background: var(--color-dark);
+    box-shadow: 0 -4px 18px rgba(13, 34, 51, 0.35);
+    transition: transform var(--transition-med);
+  }
+
+  .mobile-cta-bar.is-hidden {
+    transform: translateY(110%);
+  }
+
+  .mobile-cta-main {
+    flex: 1;
+    width: auto;
+    padding-block: 14px;
+  }
+
+  .mobile-cta-call {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--color-yellow);
+    border-radius: var(--radius-sm);
+    color: var(--color-yellow);
+    transition: background var(--transition-fast), color var(--transition-fast);
+  }
+  .mobile-cta-call:hover,
+  .mobile-cta-call:active {
+    background: var(--color-yellow);
+    color: var(--color-dark);
+  }
+
+  /* hogy a sáv ne takarja ki a lábléc alját */
+  body {
+    padding-bottom: 76px;
+  }
+
+  /* a "vissza a tetejére" gomb a sáv fölé kerüljön */
+  .back-to-top {
+    bottom: 88px;
+  }
+}
